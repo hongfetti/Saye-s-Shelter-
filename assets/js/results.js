@@ -1,47 +1,46 @@
-const availDogs = [dog1, dog2, dog3, dog4, dog5, dog6]
-
 const dog1 = {
-    name: Murphy,
-    age: puppy,
-    size: small,
-    gender: male,
+    name: 'Murphy',
+    age: 'puppy',
+    size: 'small',
+    gender: 'male',
     img: src="./images/Designer.png",
 }
 const dog2 = {
-    name: Lulu,
-    age: adult,
-    size: medium,
-    gender: female,
+    name: 'Lulu',
+    age: 'adult',
+    size: 'medium',
+    gender: 'female',
     img: src="./images/Designer.png",
 }
 const dog3 = {
-    name: Buster,
-    age: senior,
-    size: large,
-    gender: male,
+    name: 'Buster',
+    age: 'senior',
+    size: 'large',
+    gender: 'male',
     img: src="./images/Designer.png",
 }
 const dog4 =  {
-    name: Ava,
-    age: puppy,
-    size: small,
-    gender: female,
+    name: 'Ava',
+    age: 'puppy',
+    size: 'small',
+    gender: 'female',
     img: src="./images/Designer.png",
 }
 const dog5 =  {
-    name: Theo,
-    age: adult,
-    size: medium,
-    gender: male,
+    name: 'Theo',
+    age: 'adult',
+    size: 'medium',
+    gender: 'male',
     img: src="./images/Designer.png",
 }
 const dog6 =  {
-    name: Marley,
-    age: senior,
-    size: large,
-    gender: female,
+    name: 'Marley',
+    age: 'senior',
+    size: 'large',
+    gender: 'female',
     img: src="./images/Designer.png",
 }
+const availDogs = [dog1, dog2, dog3, dog4, dog5, dog6]
 
 const displayResults = function () {
     let searchCriteria = readLocalStorage()
@@ -56,9 +55,3 @@ const displayResults = function () {
 }
 
 // displayResults() 
-
-let test = function () {
-    console.log (availDogs)
-}
-
-test ()
