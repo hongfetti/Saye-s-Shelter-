@@ -11,10 +11,11 @@
 <body>
     <header>
         <h1>Search Results</h1>
-        <button>Click Me</button>
     </header>
+
+    <main>
     <!-- create a card -->
-    <div class="card mb-3" style="max-width: 540px;"> 
+    <section class="card mb-3" style="max-width: 540px;"> 
         <div class="row g-0">
           <div class="col-md-4">
             <img src="./assets/images/Designer.png" class="img-fluid rounded-start" alt="photo of dog name">
@@ -22,42 +23,47 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Dog Name</h5>
-              <p class="card-text">This is an area to enter information about the dog</p>
+              <p class="card-text"> <p>Additional Information about pet can go here.</p></p>
               <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
               <!-- button to expand -->
               <p class="d-inline-flex gap-1">
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                  V
+                  Click for more info <!--should change to a down arrow - using V for now-->
                 </button>
               </p>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
+              <article class="collapse" id="collapseExample">
 
-                  Inquire about Dog Name
+                <p>Additional Information about pet can go here.</p>
+
+                <section class="card card-body">
+
+                  <h5>Inquire about Dog Name</h5>
 
                   <!-- form for inquiry -->
                   <form id="inquiry-form">
-                    <div class="mb-3">
+                    <section class="mb-3">
                         <label for="nameInput" class="form-label">Name</label>
                         <input type="text" class="form-control" id="nameInput">
-                      </div>
-                    <div class="mb-3">
+                      </section>
+                    <section class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                    </div>
-                    <div class="mb-3">
+                    </section>
+                    <section class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Additional Notes (Optional)</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
+                      </section>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
-                </div>
-              </div>
+                </section>
+              </article>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+    </main>
+
+    <footer>Created by RAHJ</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="/assets/jscript/script.js"></script>
 </body>
