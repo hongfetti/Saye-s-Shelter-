@@ -47,16 +47,34 @@ const availDogs = [dog1, dog2, dog3, dog4, dog5, dog6]
 const getNewArray = function () {
     const searchCriteria = readLocalStorage()
 
-    let reqPet = {
+    let newPet = {
         age: searchCriteria.age,
         size: searchCriteria.size,
         gender: searchCriteria.gender,
     }
 
-
-
-    // pull objects off array that match criteria and create new array
+    for (let i = 0; i < availDogs.length; i++) {
+        const currentObj = availDogs[i];
+        if (currentObj.age === newPet.age && currentObj.size === newPet.size && currentObj.gender === newPet.gender) {
+            // pull objects off array that match criteria and create new array
+            const searchResult = availDogs.toSpliced(1, i)
+            return searchResult
+        } else {
+            noResults()
+        }
+    }
 }
+// if no results, show a card that says there are no results and to have a button to take back to landing page
+let results = true 
+
+const noResults = function () {
+    const changeCard = document.getElementById(card)
+    const clearCard = changeCard.setAttribute('class', 'noResults')
+
+    clearCard.textContent = ""
+}
+
+
 
 const displayResults = function () {
     let newArray = getNewArray ()
