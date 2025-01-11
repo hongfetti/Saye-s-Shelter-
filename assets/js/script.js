@@ -1,24 +1,27 @@
-// const subBtn = document.querySelector('#submitbtn')
-// const formEl = document.querySelector('#homeform')
-// const errorMessage = "Please complete the form.";
-// const errorEl = document.querySelector('errorMessage');
-// formEl.appendChild(errorEl);
+const subBtn = document.querySelector('#submitbtn')
+const formEl = document.querySelector('#homeform')
+const errorMessage = "Please complete the form.";
+const selectionEl = document.querySelectorAll('.form-select')
+// declare the variables of the form choice by size, age, gender
+let error = document.querySelector('#error');
 
-// const handleFormSubmit = function(event) {
-//     event.preventDefault();
-//     const selectionEl = document.querySelector('.class-select')
 
-//     if(!selectionEl) {
-//         document.querySelector('error')
-//     }
-// };
+const handleFormSubmit = function(event) {
+    event.preventDefault();
 
-// const storeLocalStorage = function() {
-//     const formSelect = document.querySelectorAll('.form-select');
-//     const formData = {
+    if(selectionEl === '') {
+        error.textcontent = errorMessage
+    } else {
+        let searchCriteria = {
+            
+        }
+    }
+};
 
-//     }
-// }
+let formData = {
+
+}
+
 
 const readLocalStorage = function () {
     let searchCriteria = JSON.parse(localStorage.getItem(searchCriteria))
@@ -28,3 +31,4 @@ const readLocalStorage = function () {
 const storeLocalStorage = function (data) {
     localStorage.setItem('searchCriteria', JSON.stringify(data))
 }
+git
