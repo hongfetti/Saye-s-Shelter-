@@ -20,21 +20,21 @@ const dog3 = {
     gender: 'male',
     img: "Designer.png",
 }
-const dog4 =  {
+const dog4 = {
     name: 'Ava',
     age: 'puppy',
     size: 'small',
     gender: 'female',
     img: "Designer.png",
 }
-const dog5 =  {
+const dog5 = {
     name: 'Theo',
     age: 'adult',
     size: 'medium',
     gender: 'male',
     img: "Designer.png",
 }
-const dog6 =  {
+const dog6 = {
     name: 'Marley',
     age: 'senior',
     size: 'large',
@@ -42,52 +42,57 @@ const dog6 =  {
     img: "Designer.png",
 }
 const availDogs = [dog1, dog2, dog3, dog4, dog5, dog6]
+const searchCriteria = readLocalStorage()
+const resultsDisplayMain = document.getElementById('results-main')
 
 // compare properties of searchCriteria and objects in availDogs for matches
 const getNewArray = function () {
-    const searchCriteria = readLocalStorage()
 
-    let newPet = {
-        age: searchCriteria.age,
-        size: searchCriteria.size,
-        gender: searchCriteria.gender,
-    }
-
-    for (let i = 0; i < availDogs.length; i++) {
-        const currentObj = availDogs[i];
-        if (currentObj.age === newPet.age && currentObj.size === newPet.size && currentObj.gender === newPet.gender) {
-            // pull objects off array that match criteria and create new array
-            const searchResult = availDogs.toSpliced(1, i)
-            return searchResult
-        } else {
-            noResults()
+    const filteredDogs = availDogs.filter(function (dog) {
+        if (dog.age === searchCriteria.age && dog.size === searchCriteria.size && dog.gender === searchCriteria.gender) {
+            return true
         }
-    }
+        return false
+    })
+    return filteredDogs
 }
+
 // if no results, show a card that says there are no results and to have a button to take back to landing page
-let results = true 
+let results = true
 
 const noResults = function () {
-    const changeCard = document.getElementById(card)
-    const clearCard = changeCard.setAttribute('class', 'noResults')
+    document.getElementById('dog-card').style.display = 'none'
 
-    clearCard.textContent = ""
+    const noResultsMsg = resultsDisplayMain.createElement('p')
+    noResultsMsg.textContent('No Results found. Please go back and try again')
+    resultsDisplayMain.appendChild(noResultsMsg)
 }
 
 
 
 const displayResults = function () {
-    let newArray = getNewArray ()
+    let newArray = getNewArray()
 
-
-
-
+    if (newArray) {
+        newArray.forEach(function (dog) {
+            createCard(dog)
+        });
+    } else {
+        noResults()
+    }
+}
+// display cards containing object information for new array
+// create element
+const createCard = function () {
+    const createdSection = resultsDisplayMain.createElement('section')
+    createdSection.setAttribute('class', 'card mb-3')
+    createdSection.setAttribute('style', 'max-width: 540px')
+    createdSection.setAttribute('id', 'dog-card')
 
     
-    // display cards containing object information for new array
-        // create element      
-        // populate information on element
-        // append element to page
+
+    // append element to page
+    resultsDisplayMain.appendChild()
 }
 
-// displayResults() 
+displayResults() 

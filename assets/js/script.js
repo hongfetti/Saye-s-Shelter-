@@ -21,10 +21,15 @@
 // }
 
 const readLocalStorage = function () {
-    let searchCriteria = JSON.parse(localStorage.getItem(searchCriteria))
-    return searchCriteria
+    return JSON.parse(localStorage.getItem('searchCriteria'))
 }
 
 const storeLocalStorage = function (data) {
     localStorage.setItem('searchCriteria', JSON.stringify(data))
 }
+
+localStorage.setItem('searchCriteria', JSON.stringify({
+    age: 'puppy',
+    size: 'small',
+    gender: 'male',
+}))
