@@ -82,17 +82,24 @@ const displayResults = function () {
     }
 }
 // display cards containing object information for new array
-// create element
-const createCard = function () {
-    const createdSection = resultsDisplayMain.createElement('section')
-    createdSection.setAttribute('class', 'card mb-3')
-    createdSection.setAttribute('style', 'max-width: 540px')
-    createdSection.setAttribute('id', 'dog-card')
+// create elements using js (WIP - commenting out for now)
+// const createCard = function () {
+//     const createdSection = resultsDisplayMain.createElement('section')
+//     createdSection.setAttribute('class', 'card mb-3')
+//     createdSection.setAttribute('style', 'max-width: 540px')
+//     createdSection.setAttribute('id', 'dog-card')
+//     resultsDisplayMain.appendChild(createdSection)
+
+//     const rowDiv = createdSection.createElement('div')
+//     rowDiv.setAttribute('class', 'row g-0')
+//     createdSection.appendChild(rowDiv)
+
+//     const dogImg = rowDiv.createElement('img')
+//     dogImg.setAttribute('src', './assets/images/')
+//     dogImg.setAttribute('class', 'img-fluid rounded-start')
+//     dogImg.setAttribute('alt', 'photo of `${dog.name}`')
 
     
-
-    // append element to page
-    resultsDisplayMain.appendChild()
-}
+// }
 
 displayResults() 

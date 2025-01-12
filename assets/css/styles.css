@@ -10,8 +10,13 @@ justify-content: center;
 align-items: center;
 }
 
-logo {
+img {
     position: relative;
     object-fit: contain;
     
+}
+
+#error {
+    color: red;
+
 }
