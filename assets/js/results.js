@@ -42,12 +42,13 @@ const dog6 = {
     img: "Designer.png",
 }
 const availDogs = [dog1, dog2, dog3, dog4, dog5, dog6]
-const searchCriteria = readLocalStorage()
+const searchCriteria = JSON.parse(localStorage.getItem('formData'))
+
+console.log(searchCriteria)
 const resultsDisplayMain = document.getElementById('results-main')
 
 // compare properties of searchCriteria and objects in availDogs for matches
 const getNewArray = function () {
-console.log(searchCriteria)
     const filteredDogs = availDogs.filter(function (dog) {
         console.log(dog)
         if (dog.age === searchCriteria.age && dog.size === searchCriteria.size && dog.gender === searchCriteria.gender) {
@@ -59,7 +60,6 @@ console.log(searchCriteria)
 }
 
 // if no results, show a card that says there are no results and to have a button to take back to landing page
-let results = true
 
 const noResults = function () {
     const noResultsMsg = document.createElement('p')
@@ -80,8 +80,8 @@ const displayResults = function () {
         noResults()
     }
 }
+
 // display cards containing object information for new array
-// create elements using js (WIP - commenting out for now)
 const createCard = function (dog) {
     const createdSection = document.createElement('section')
     createdSection.setAttribute('class', 'card mb-3')
