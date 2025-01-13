@@ -1,5 +1,7 @@
 //prevent form from submitting the traditional way
-document.getElementById('homeform').addEventListener('submit', function(event) {
+const form = document.getElementById('homeform')
+if (form) {
+form.addEventListener('submit', function(event) {
     event.preventDefault();
 
 //values from the dropdown
@@ -16,11 +18,22 @@ if (pet === ''  || age === '' || gender === '' || size === '') {
 
 //if they select "no" for adopt a pet, the page doesn't submit
 const want = document.getElementById('pet').value;
-if (pet === '2') {
+if (pet === 'no') {
     document.getElementById('error').textContent = 'Change response to "Yes" if you want to adopt.';
     return
 }
 
+//save the data to localStorage before we submit
+const formData = {
+    age: age,
+    gender: gender,
+    size: size,
+};
+localStorage.setItem('formData', JSON.stringify(formData))
+
 //redirect to next page 
 window.location.href = './results.html'
 });
+}
+
+
