@@ -1,81 +1,83 @@
 body {
-    margin: 0;
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
-    background-color: #f79875;
-    color: #0a2342;
-  }
-  
-  
-  
-  
-  .container {
-    width: 80%;
-    margin: 40px;
-    padding: 40px;
-    border-style: solid;
-    align-content: center;
-    display: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #e9e5e3;
-    font-size: 22px;
-    color: #0a2342;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  
-  img{
-    height: 250px;
-    object-fit: contain;
-  
-  
-  }
-  
-  
-  .error {
-    color: red;
-  
-  
-  }
-  
-  
-  header {
-    font-size: 60px;
-    font-family: fantasy;
-    color: #0a2342;
-    padding-left: 40px;
-    padding-top: 40px;
-  }
-  
-  
-  h1 {
-    font-size: 30px;
-  }
-  
-  
-  .form-select {
-    border: 10px black;
-  }
-  
-  
-  homeform {
-    font-size: 30px, white;
-  
-  
-    text-align: left;
-  }
-  
-  
-  footer {
-    padding-left: 40px;
-    font-size: 20px;
-    color: #0a2342;
-    font-family: fantasy;
-  }
-  
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: #f79875;
+  color: #0a2342;
+}
+
+
+
+
+.container {
+  width: 80%;
+  margin: 40px;
+  padding: 40px;
+  border-style: solid;
+  align-content: center;
+  display: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9e5e3;
+  font-size: 22px;
+  color: #0a2342;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+img {
+  height: 250px;
+  object-fit: contain;
+
+
+}
+
+
+.error {
+  color: red;
+
+
+}
+
+
+header {
+  font-size: 60px;
+  font-family: fantasy;
+  color: #0a2342;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+
+h1 {
+  font-size: 30px;
+}
+
+.inquiry-form {
+  padding-left: 40px;
+}
+
+.form-select {
+  border: 10px black;
+}
+
+
+homeform {
+  font-size: 30px, white;
+
+
+  text-align: left;
+}
+
+
+footer {
+  padding-left: 40px;
+  font-size: 20px;
+  color: #0a2342;
+  font-family: fantasy;
+}
