@@ -4,7 +4,7 @@ const dog1 = {
     age: 'puppy',
     size: 'small',
     gender: 'male',
-    img: "Designer.png",
+    img: "./assets/images/Designer.png",
 }
 const dog2 = {
     name: 'Lulu',
