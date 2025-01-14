@@ -10,14 +10,8 @@ There's no installation needed.
 https://hongfetti.github.io/Saye-s-Shelter-/
 ```
 
-Just fill out the form...
-```md
-![home page](assets/images/home.png)
-```
-and you'll be redirected!
-```md
-![search](assets/images/results.png)
-```
+Just fill out the form and you'll be redirected!
+
 
 ## Contributing
 
